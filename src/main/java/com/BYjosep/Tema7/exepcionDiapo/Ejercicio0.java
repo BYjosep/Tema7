@@ -7,7 +7,8 @@ public class Ejercicio0 {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) throws Exception {
-        String matricula = "r";
+        String matricula;
+        matricula = scanner.nextLine();
         if (validarMatricula(matricula)) {
             System.out.println("La matricula es correcta");
         } else throw new Exception("Matricula no valida");
