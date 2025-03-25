@@ -1,20 +1,20 @@
 package com.BYjosep.Tema7;
 
-import java.lang.reflect.Array;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio2 {
     private static Scanner scanner = new Scanner(System.in);
 public static void main(String[] args) {
-    double[] numero = introducirNumero();
-    scanner.close();
-    System.out.println(Arrays.toString(numero));
+     introducirNumero();
+
 }
 
-    public static double[] introducirNumero() {
+    public static void introducirNumero() {
         double[] numeros = new double[10];
         int errors = 0;
+        double maximoValor = Double.MIN_VALUE;
         double numero;
         for (int i = 0; i < numeros.length; i++) {
             try {
@@ -27,8 +27,14 @@ public static void main(String[] args) {
                 errors++;
             }
         }
-        System.out.println(errors);
-        return numeros;
+        scanner.close();
+        for (int i = 0; i < numeros.length; i++) {
+            if (numeros[i] > maximoValor) {
+                maximoValor = numeros[i];
+            }
+        }
+        System.out.printf("Han habido %d Errores\n",errors);
+        System.out.printf("El valor mas alto es: %.2f\n",maximoValor);
     }
 
 

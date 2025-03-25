@@ -1,9 +1,9 @@
 package com.BYjosep.Tema7.exepcionDiapo;
 
-import com.BYjosep.Tema7.exepcionDiapo.exeptions.InvalidPlateLengthExeption;
-import com.BYjosep.Tema7.exepcionDiapo.exeptions.InvalidPlateLetersExeption;
-import com.BYjosep.Tema7.exepcionDiapo.exeptions.InvalidPlateNumberExeption;
-import com.BYjosep.Tema7.exepcionDiapo.exeptions.InvlidPlateExeption;
+import com.BYjosep.Tema7.exeptions.InvalidPlateLengthExeption;
+import com.BYjosep.Tema7.exeptions.InvalidPlateLetersExeption;
+import com.BYjosep.Tema7.exeptions.InvalidPlateNumberExeption;
+import com.BYjosep.Tema7.exeptions.InvlidPlateExeption;
 
 import java.util.Scanner;
 

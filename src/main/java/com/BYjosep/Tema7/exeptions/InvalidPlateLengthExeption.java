@@ -1,4 +1,4 @@
-package com.BYjosep.Tema7.exepcionDiapo.exeptions;
+package com.BYjosep.Tema7.exeptions;
 
 import java.util.InvalidPropertiesFormatException;
 
