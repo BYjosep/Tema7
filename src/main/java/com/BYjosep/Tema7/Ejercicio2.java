@@ -16,14 +16,14 @@ public static void main(String[] args) {
         int errors = 0;
         double maximoValor = Double.MIN_VALUE;
         double numero;
-        for (int i = 0; i < numeros.length; i++) {
+        for (int i = 0; i < numeros.length;) {
             try {
                 System.out.println("Introduce el numero: ");
                 numero = Double.parseDouble(scanner.nextLine());
                 numeros[i] = numero;
+                i++;
             }catch (NumberFormatException nfe){
                 System.err.println("Solo se permiten numeros");
-                --i;
                 errors++;
             }
         }
