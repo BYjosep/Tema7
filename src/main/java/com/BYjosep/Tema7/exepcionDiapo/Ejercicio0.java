@@ -6,53 +6,33 @@ public class Ejercicio0 {
 
     private static final Scanner scanner = new Scanner(System.in);
 
-    public static void main(String[] args) {
-        int numero = leerEntero("Dime un número", 0, 100);
+    public static void main(String[] args) throws Exception {
+        String matricula = "r";
+        if (validarMatricula(matricula)) {
+            System.out.println("La matricula es correcta");
+        } else throw new Exception("Matricula no valida");
 
-        try {
-            int numero2 = leerEnteroPasandoLaPelota("Dime otro número", 0, 100);
-        } catch (NumberFormatException nfe) {
-            System.err.println("Sólo números por favor");
-        }
-
-        System.out.println(numero);
-    }
-
-    /**
-     * @param mensaje
-     * @param min
-     * @param max
-     * @return
-     * @throws NumberFormatException
-     */
-    public static int leerEnteroPasandoLaPelota(String mensaje, int min, int max) {
-        boolean valido;
-        int numero;
-        System.out.println(mensaje);
-        numero = Integer.parseInt(scanner.nextLine());
-        valido = numero >= min && numero <= max;
-        if (!valido) {
-            System.err.println("El número debe estar entre " + min + " y " + max);
-        }
-        return numero;
     }
 
 
-    public static int leerEntero(String mensaje, int min, int max) {
-        boolean valido = false;
-        int numero = Integer.MIN_VALUE;
-        do {
-            try {
-                System.out.println(mensaje);
-                numero = Integer.parseInt(scanner.nextLine());
-                valido = numero >= min && numero <= max;
-                if (!valido) {
-                    System.err.println("El número debe estar entre " + min + " y " + max);
-                }
-            } catch (NumberFormatException nfe) {
-                System.err.println("Sólo números por favor");
+    public static boolean validarMatricula(String matricula) {
+        int i;
+        if (matricula.length() != 8) {
+            return false;
+        }
+        for (i = 0; i < 4; i++) {
+            if (!Character.isDigit(matricula.charAt(i))) {
+                return false;
             }
-        } while (!valido);
-        return numero;
+        }
+        if (!Character.isWhitespace(matricula.charAt(i++))) {
+            return false;
+        }
+        for (int j = i; j < matricula.length(); j++) {
+            if (!Character.isLetter(matricula.charAt(j))) {
+                return false;
+            }
+        }
+        return true;
     }
 }
