@@ -2,8 +2,8 @@ package com.BYjosep.Tema7.exepcionDiapo.exeptions;
 
 import java.util.InvalidPropertiesFormatException;
 
- class InvalidPlateLengthExeption extends InvalidPropertiesFormatException {
-     InvalidPlateLengthExeption(String message) {
+ public class InvalidPlateLengthExeption extends InvalidPropertiesFormatException {
+     public InvalidPlateLengthExeption(String message) {
         super(message);
     }
 }
