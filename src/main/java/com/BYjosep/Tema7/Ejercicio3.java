@@ -46,9 +46,9 @@ public class Ejercicio3 {
 
 
     private static double comprobarSiEsNumero() {
-        double numero = 0;
+        double numero ;
         try {
-            System.out.printf("Indica el numero:\n");
+            System.out.print("Indica el numero:");
             numero = Double.parseDouble(scanner.nextLine());
 
         }catch (NumberFormatException nfe){
