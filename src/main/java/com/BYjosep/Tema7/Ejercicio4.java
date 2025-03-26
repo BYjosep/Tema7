@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio4 {
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         int[] array = new int[5];
@@ -19,6 +19,7 @@ public class Ejercicio4 {
         } catch (NullPointerException npe) {
             System.err.println(npe.getMessage());
         }
+        scanner.close();
     }
 
     private static void rellenarArray(int[] array, String mensaje) throws NullPointerException {
