@@ -8,11 +8,19 @@ public class Ejercicio3 {
 
     public static void main(String[] args) {
         double[] numeros = ponerNumerosEnArray("Ingrese numeros. Para salir pulse otro caracter.");
-        System.out.println(verNumeroMasAltoDeUnArrayDeDoubles(numeros));
+        try{
+            System.out.println(verNumeroMasAltoDeUnArrayDeDoubles(numeros));
+
+        }catch(ArrayIndexOutOfBoundsException aioobe){
+            System.err.println(aioobe.getMessage());
+        }
     }
 
     public static double verNumeroMasAltoDeUnArrayDeDoubles(double[] numero) {
         double valorMaximo = Double.MIN_VALUE;
+        if (numero.length == 0) {
+            throw new ArrayIndexOutOfBoundsException("No se han introducido numeros");
+        }
         for (int i = 0; i < numero.length; i++) {
             if (numero[i] > valorMaximo) {
                 valorMaximo = numero[i];
