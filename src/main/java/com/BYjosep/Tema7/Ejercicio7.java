@@ -8,6 +8,11 @@ public class Ejercicio7 {
         System.out.println(mostrarCadenasArray(nombres));
     }
 
+    /**
+     *
+     * @param array array a ingresar
+     * @return devuelve el primer caracter de los valores del array controlando los nulls
+     */
     public static String mostrarCadenasArray(String[] array) {
         StringBuilder sb = new StringBuilder();
         sb.append("[");

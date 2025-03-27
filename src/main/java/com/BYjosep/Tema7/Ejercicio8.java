@@ -13,6 +13,10 @@ public class Ejercicio8 {
         exepcionC(numeros);
     }
 
+    /**
+     * Introduces un valor para que divida entre un random
+     * @param divisor valor a actuar como divisor
+     */
     private static void exepcionA(int divisor) {
         try {
             int numero = LibRandoms.ran(Integer.MIN_VALUE + 10000000, Integer.MAX_VALUE - 10000000);
@@ -23,6 +27,11 @@ public class Ejercicio8 {
         }
     }
 
+
+    /**
+     *
+     * @param numeros array de numeros como test se le esta introduciendo un nullPointer
+     */
     private static void exepcionB(int[] numeros) {
 
         try {
@@ -35,6 +44,13 @@ public class Ejercicio8 {
 
     }
 
+
+    /**
+     *
+     * @param numeros se introduce un array
+     *                para este caso se hace un while tru para provocar
+     *                ArrayIndexOutOfBoundsException
+     */
     private static void exepcionC(int[] numeros) {
         int contador = 0;
         while (true) {
