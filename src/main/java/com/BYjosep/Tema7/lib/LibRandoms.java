@@ -3,9 +3,15 @@ package com.BYjosep.Tema7.lib;
 import java.util.Random;
 
 public class LibRandoms {
-    private static Random random = new Random();
+    public static Random random = new Random();
 
+    /**
+     * Randoms para boolean
+     **/
+    public static boolean ranBoolean() {
 
+        return random.nextBoolean();
+    }
     /**
      * Randoms para ints
      **/

@@ -1,5 +1,7 @@
 package com.BYjosep.Tema7;
 
+import com.BYjosep.Tema7.lib.ANSI;
+
 import java.util.Arrays;
 
 public class Ejercicio6 {
@@ -19,7 +21,8 @@ public class Ejercicio6 {
             if (divisor[i] != 0) {
                 resultado[i] = dividendo / (divisor[i]);
             } else {
-                System.out.println("El divisor no puede ser zero");
+                ANSI.printf("El divisor no puede ser zero\n", false, ANSI.Color.RED, ANSI.Color.BLACK);
+                //System.out.println("El divisor no puede ser zero");
                 resultado[i] = 0;
             }
 
