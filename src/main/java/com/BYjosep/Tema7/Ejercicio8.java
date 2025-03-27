@@ -42,7 +42,7 @@ public class Ejercicio8 {
             try {
                 System.out.println(numeros[contador]);
                 contador++;
-            } catch (ArrayIndexOutOfBoundsException ae) {
+            } catch (ArrayIndexOutOfBoundsException aioobe) {
                 ANSI.printf("No se pueden mostrar mas numeros, se ha sobrepasado la longitud del array.\n", false, ANSI.Color.RED, ANSI.Color.NONE);
                 break;
             }
