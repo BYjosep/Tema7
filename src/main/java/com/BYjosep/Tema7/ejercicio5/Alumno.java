@@ -28,7 +28,7 @@ public class Alumno {
         return nombre;
     }
 
-    public Alumno queAlumnoEsMayor(Alumno alumno) {
+    public Alumno whoIsOlder(Alumno alumno) {
         if (fechaNacimiento.isBefore(alumno.fechaNacimiento)) {
             return this;
         } else {

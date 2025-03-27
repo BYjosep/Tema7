@@ -15,7 +15,7 @@ public class Ejercicio5 {
 
         Alumno alumno2 = crearAlumno();
         System.out.println(alumno2);
-        System.out.println("El alumno más mayor es: " + alumno1.queAlumnoEsMayor(alumno2));
+        System.out.println("El alumno más mayor es: " + alumno1.whoIsOlder(alumno2));
 
     }
 
