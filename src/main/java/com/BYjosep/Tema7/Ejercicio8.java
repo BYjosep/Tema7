@@ -30,7 +30,7 @@ public class Ejercicio8 {
                 System.out.println(numeros[i]);
             }
         } catch (NullPointerException npe) {
-            ANSI.printf("El array ingresado esta vacio\n", false, ANSI.Color.RED, ANSI.Color.NONE);
+            ANSI.printf("El array ingresado esta vacio.\n", false, ANSI.Color.RED, ANSI.Color.NONE);
         }
 
     }
@@ -43,7 +43,7 @@ public class Ejercicio8 {
                 System.out.println(numeros[contador]);
                 contador++;
             } catch (ArrayIndexOutOfBoundsException ae) {
-                ANSI.printf("No se pueden mostrar mas numeros\n", false, ANSI.Color.RED, ANSI.Color.NONE);
+                ANSI.printf("No se pueden mostrar mas numeros, se ha sobrepasado la longitud del array.\n", false, ANSI.Color.RED, ANSI.Color.NONE);
                 break;
             }
         }
@@ -51,9 +51,3 @@ public class Ejercicio8 {
 
 }
 
-/*
-Crea un programa que provoque las siguientes excepciones, las trate y muestre un mensaje
-indicando que la excepción ha sido tratada:
-
- c) IndexOutOfBoundsException
- */
