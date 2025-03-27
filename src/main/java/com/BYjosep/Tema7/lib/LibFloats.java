@@ -2,7 +2,8 @@ package com.BYjosep.Tema7.lib;
 
 import java.util.Scanner;
 
-public class LibInInts {
+public class LibFloats {
+
     public static Scanner scanner = new Scanner(System.in);
 
     /**
@@ -12,6 +13,9 @@ public class LibInInts {
         scanner.close();
     }
 
+    /* **********************
+     *********  in  *********
+     ************************ */
 
     /**
      * Ingresar text.
@@ -20,10 +24,11 @@ public class LibInInts {
      *
      * @return Devuelve la frase ingresada en formato {@link Character char}
      */
-    public static int ingresarUnNumero(String texto) {
+    public static float ingresarUnNumeroF(String texto) {
         System.out.println(texto);
 
-        return Integer.parseInt(scanner.nextLine());
+        return Float.parseFloat(scanner.nextLine());
+
     }
 
 
@@ -34,15 +39,30 @@ public class LibInInts {
      *
      * @return Devuelve la frase ingresada en formato {@link Character char}
      */
-    public static int ingresarUnNumero(String texto, int min) {
-        int numero;
+    public static float ingresarUnNumeroF(String texto, float min) {
+        float numero;
         do {
             System.out.println(texto);
-            numero = Integer.parseInt(scanner.nextLine());
+            numero = Float.parseFloat(scanner.nextLine());
 
         } while (numero < min);
 
+
         return numero;
+
+    }
+
+
+    /**
+     * Ingresar número con valor minimo y maximo.
+     * Recuerde cerrar {@link Scanner Scanner} con el metodo cerrarScaner
+     * (Echo para no tener que estar escribiendo este codigo en cada ejercicio)
+     *
+     * @return Devuelve la frase ingresada en formato {@link Character char}
+     */
+    public static float ingresarUnNumero(String texto, float min, float max) {
+        String error = "Numero no válido. Solo puede ingresar numeros entre " + min + " y " + max + ".";
+        return ingresarUnNumero(texto, min, max, error);
     }
 
 
@@ -53,27 +73,14 @@ public class LibInInts {
      *
      * @return Devuelve el número de la opcion seleccionada
      */
-    public static int ingresarUnNumero(String texto, int min, int max) {
-
-        return ingresarUnNumero(texto, min, max, "Numero no valido");
-    }
-
-
-    /**
-     * Ingresar número con valor minimo y maximo.
-     * Recuerde cerrar {@link Scanner Scanner} con el metodo cerrarScaner
-     * (Echo para no tener que estar escribiendo este codigo en cada ejercicio)
-     *
-     * @return Devuelve el número de la opcion seleccionada
-     */
-    public static int ingresarUnNumero(String texto, int min, int max, String error) {
-        int numero = Integer.MIN_VALUE;
+    public static float ingresarUnNumero(String texto, float min, float max, String error) {
+        float numero = Float.MIN_VALUE;
         boolean valido = false;
         do {
 
             try {
                 System.out.println(texto);
-                numero = Integer.parseInt(scanner.nextLine());
+                numero = Float.parseFloat(scanner.nextLine());
 
             } catch (NumberFormatException nfe) {
                 System.err.println("No se ha ingresado un numero");
@@ -91,4 +98,7 @@ public class LibInInts {
     }
 
 
+    /* **********************
+     ********* out  *********
+     ************************ */
 }
